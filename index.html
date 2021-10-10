@@ -4,27 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- MyCss -->
     <link rel="stylesheet" href="./css/index.css">
     
-    <title>Document</title>
+    <title>Feria de Empleo</title>
 </head>
 <body>
-    
     <div class="heading">
-        <h1>Custom Carousel</h1>
-       <div class="container">
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-        <div class="ui-card"></div>
-      </div>
+        <h1>Carousel Empleo</h1>
+        <div id="main">
+            <div>
+                <div class="flechas">
+                    <div id="flecha-izq" class="flecha-izq">
+                        <i class="fas fa-arrow-circle-left fa-6x"></i>
+                    </div>
+                    <div id="flecha-der" class="flecha-der">
+                        <i class="fas fa-arrow-circle-right fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="cardContainer">
+            <div id="firstLast" class="ui-card">
 
+            </div>
+            <div id="firstLast" class="ui-card">
+
+            </div>
+        </div>
+    </div>
     
+<template id="template-card">
+    <div class="ui-card">
+        <img src="./img/CardComponents/cardHeader.jpeg" alt="Imagen Header Card" class="card-header">
+        <div class="card-body">
+            <img id="image" class="card-body-img" src="" alt="">
+            <h1 id="body-title" class="card-body-title"></h1>
+            <div class="body-text-container">
+                <div class="text-vision">
+                    <h5>Vision</h5>
+                <p id="type1" class="card-body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dignissimos a corporis unde ea perferendis quisquam sit. Illum laboriosam eligendi minus id! Molestias perferendis ex voluptas dolores deserunt autem quaerat?</p>
+                </div>
+                
+                <div class="text-mision">
+                    <h5>Mision</h5>
+                <p id="type2" class="card-body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dignissimos a corporis unde ea perferendis quisquam sit. Illum laboriosam eligendi minus id! Molestias perferendis ex voluptas dolores deserunt autem quaerat?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="card-footer-text">
+                <a id="linkedIn" class="logo" href=""><i class="fab fa-linkedin fa-3x"></i></a>
+            </div>
+            <div class="card-footer-text">
+                <a id="WebSite" class="logo" href=""><i class="fas fa-globe fa-3x"></i></a>
+            </div>
+            <div class="card-footer-text">
+                <a id="E-Mail" class="logo" href=""><i class="fas fa-envelope fa-3x"></i></a>
+               
+            </div>  
+        </div>
+    </div>
+</template>
+
     <!-- JQuery -->
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -32,6 +76,7 @@
         crossorigin="anonymous">
     </script>
     <!-- My Js -->
+    <script src="./js/cards.js"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
