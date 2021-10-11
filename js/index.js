@@ -113,12 +113,12 @@ const touchMove = evt => {
 }
 
 const touchEnd = () => {
-  if (startX+100 < movingX && (startY - movingY) < 30){
+  if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
     console.log(startY)
     console.log(movingY)
     console.log('left')
     $('.active').prev().trigger('click');
-  } else if (startX-100 > movingX && (startY - movingY) < 30){
+  } else if (startX-100 > movingX && Math.abs(startY - movingY) < 30){
     console.log(startY)
     console.log(movingY)
     console.log('right')

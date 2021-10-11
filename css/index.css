@@ -170,9 +170,8 @@ html body .heading a {
     
   }
   @media only screen and (max-width: 992px)  {
-    html body .heading {
-      max-width: 100%;
-    }
+    *, *:before, *:after {
+      box-sizing: inherit; }
     .imgContainer{
       margin: auto;
       margin-bottom: 2rem;
