@@ -56,9 +56,7 @@ const showCard = () => {
   card.insertBefore(fragment, card.children[1])
 }
 
-document.addEventListener('DOMContentLoaded', () =>{
-  showCard()
-})
+showCard()
 
 $num = $('.ui-card').length;
 $even = $num / 2;
