@@ -115,10 +115,10 @@ const touchMove = evt => {
 }
 
 const touchEnd = () => {
-  if (startX+100 < movingX){
+  if (startX+100 < movingX && startY+100 > movingY){
     detectMovement = "left"
     $('.active').prev().trigger('click');
-  } else if (startX-100 > movingX){
+  } else if (startX-100 > movingX && startY-100 < movingY){
     detectMovement = "right"
     $('.active').next().trigger('click');
   }
