@@ -113,17 +113,43 @@ const touchMove = evt => {
 }
 
 const touchEnd = () => {
-  if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
-    console.log(startY)
-    console.log(movingY)
-    console.log('left')
-    $('.active').prev().trigger('click');
-  } else if (startX-100 > movingX && Math.abs(startY - movingY) < 30){
-    console.log(startY)
-    console.log(movingY)
-    console.log('right')
-    $('.active').next().trigger('click');
+  if (card.children[12].classList.contains('active')){
+    if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
+      console.log('left')
+      $('.active').prev().trigger('click');
+    } 
+  } else if (card.children[1].classList.contains('active')){
+    if (startX+100 > movingX && Math.abs(startY - movingY) < 30){
+      console.log('right')
+      $('.active').next().trigger('click');
+    } 
+  } else if (card.children[1].classList.contains('active') == false && card.children[12].classList.contains('active') == false){
+    if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
+      console.log('left')
+      $('.active').prev().trigger('click');
+    } else if (startX-100 > movingX && Math.abs(startY - movingY) < 30){
+      console.log('right')
+      $('.active').next().trigger('click');
+    }
   }
+  
+  
+  // else {
+    
+  // }
 
-  // if(detectMovement)
+  //  else {
+  //   if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
+  //     console.log('left')
+  //     $('.active').prev().trigger('click');
+  //   } else if (startX-100 > movingX && Math.abs(startY - movingY) < 30){
+  //     console.log('right')
+  //     $('.active').next().trigger('click');
+  //   }
+  // }
+  
+  
+  console.log(card.children[12])
+  const testing = card.children[12].classList.contains('active')
+  console.log(testing)
 }
