@@ -48,7 +48,7 @@ orgTotal.push(
                 linkedIn: "https://ar.linkedin.com/company/agora-public-affairs-&-strategic-communications", 
                 descripcion: "Breve Descripcion del Producto para mostrar al hacer click"},
     {id:6, nombre: "Consejo Argentino de RRII", 
-                img: "./img/Logos/LogoCari.JPG",
+                img: "./img/Logos/LogoCari.jpg",
                 Phone: "", 
                 Mail:"", 
                 WebSite:"https://www.cari.org.ar" , 
