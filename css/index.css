@@ -33,7 +33,6 @@ html body .heading {
   cursor: pointer;
 }
 .heading .imgContainer .imgDDP{
-
   cursor: pointer;
 }
 
@@ -76,7 +75,7 @@ html body .heading a {
   box-shadow: none ;
   cursor: default ;
   opacity: 0;
-  box-shadow: NONE;
+  box-shadow: none;
 }
 
 .ui-card .card-header{
@@ -174,8 +173,25 @@ html body .heading a {
     html body .heading {
       max-width: 100%;
     }
-    .heading .headerImg{
-      max-width: 100%;
+    .imgContainer{
+      margin: auto;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center; 
+    }
+    .heading .imgContainer .imgLevellers{
+      width: 10rem;
+      height: 10rem;
+      margin-left: 0rem;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+    .heading .imgContainer .imgDDP{
+      cursor: pointer;
+      width: 12rem;
+      height: 12rem;
     }
     .container {
       display: flex;

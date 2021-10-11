@@ -100,3 +100,28 @@ $('html body').keydown(function(e) {
     $('.active').next().trigger('click');
   }
 });
+
+let startX, startY, movingX, movingY
+
+let detectMovement
+
+const touchStart = evt => {
+  startX = evt.touches[0].clientX;
+  startY = evt.touches[0].clientY;
+}
+const touchMove = evt => {
+  movingX = evt.touches[0].clientX;
+  movingY = evt.touches[0].clientY;
+}
+
+const touchEnd = () => {
+  if (startX+100 < movingX){
+    detectMovement = "left"
+    $('.active').prev().trigger('click');
+  } else if (startX-100 > movingX){
+    detectMovement = "right"
+    $('.active').next().trigger('click');
+  }
+
+  // if(detectMovement)
+}
