@@ -3,24 +3,52 @@ const fragment = document.createDocumentFragment()
 const card = document.getElementById('cardContainer')
 
 
+
 const showCard = () => {
-  stockTotal.forEach(elemento =>{
+  orgTotal.forEach(elemento =>{
     template.getElementById('image').setAttribute('src', elemento.img)
     template.getElementById('body-title').textContent = elemento.nombre
-    
-    template.getElementById('linkedIn').setAttribute('href', elemento.linkedIn)
-    template.getElementById('E-Mail').setAttribute('href', elemento.Mail)
-    template.getElementById('WebSite').setAttribute('href', elemento.WebSite)
+    template.getElementById('text-One').textContent = elemento.descUno
+    template.getElementById('text-Two').textContent = elemento.descDos
+    template.getElementById('text-Three').textContent = elemento.descTres
+    template.getElementById('text-Four').textContent = elemento.descCuatro
 
-    // if (elemento.linkedIn == ""){
-    //   template.getElementById('linkedIn').innerHTML = ""
-    // }
-    // if (elemento.Mail == ""){
-    //   template.getElementById('E-Mail').innerHTML = ""
-    // }
-    // if (elemento.WebSite == ""){
-    //   template.getElementById('WebSite').innerHTML = ""
-    // }
+    const footer = template.getElementById('footer-card')
+    footer.innerHTML=""
+    if (elemento.Mail != ""){
+      const createMail = document.createElement('div')
+      createMail.classList.add('card-footer-text')
+      createMail.innerHTML = `
+      <a id="E-Mail${elemento.id}" class="logo" href="${elemento.Mail}"><i class="fas fa-envelope fa-3x"></i></a>
+      `
+      footer.appendChild(createMail)
+    }
+
+    if (elemento.linkedIn != ""){
+      const createLink = document.createElement('div')
+      createLink.classList.add('card-footer-text')
+      createLink.innerHTML = `
+      <a id="LinkedIn${elemento.id}" class="logo" href="${elemento.linkedIn}"><i class="fab fa-linkedin fa-3x"></i></a>
+      `
+      footer.appendChild(createLink)
+    }
+    if (elemento.WebSite != ""){
+      const createWeb = document.createElement('div')
+      createWeb.classList.add('card-footer-text')
+      createWeb.innerHTML = `
+      <a id="WebSite${elemento.id}" class="logo" href="${elemento.WebSite}"><i class="fas fa-globe fa-3x"></i> </i></a>
+      `
+      footer.appendChild(createWeb)
+    }
+    if (elemento.Phone != ""){
+      const createPhone = document.createElement('div')
+      createPhone.classList.add('card-footer-text')
+      createPhone.innerHTML = `
+      <a id="Phone${elemento.id}" class="logo" href="${elemento.Phone}"><i class="fas fa-phone-square-alt fa-3x"></i></a>
+      `
+      footer.appendChild(createPhone)
+    }
+
   
     const clone = template.cloneNode(true)
     fragment.appendChild(clone)
