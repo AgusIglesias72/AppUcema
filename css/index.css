@@ -1,20 +1,23 @@
 html {
-  min-height: 100vh;
+  max-width: 100vw;
 }
+*, *:before, *:after {
+  box-sizing: inherit; }
 html body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin: none;
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(to bottom,rgba(160,3,39,1) 1%,rgba(160,3,39,1) 1%,rgba(109,0,25,1) 100%)
 }
 html body .heading {
+  max-width: 100%;
   text-align: center;
-  color: #2e5266;
   margin-bottom: 3rem;
 }
 .headerImg{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem;
 }
 .flechas {
@@ -32,6 +35,8 @@ html body .heading a {
 
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 .container .ui-card {
@@ -74,6 +79,7 @@ html body .heading a {
     height: 14rem;
 }
 .ui-card .card-body-title{
+    padding: 0px 2rem ;
     margin-top: -2px;
     font-size: 2rem;
 }
@@ -146,8 +152,16 @@ html body .heading a {
     
   }
   @media only screen and (max-width: 992px)  {
+    html body .heading {
+      max-width: 100%;
+    }
+    .heading .headerImg{
+      max-width: 100%;
+    }
     .container {
       display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
     .container .ui-card {
@@ -156,8 +170,8 @@ html body .heading a {
       border-radius: 16px;
       overflow: hidden;
       align-items: center;
-      box-shadow: 10px 10px rgba(0, 0, 0, 0.095);
-      height: 45rem;
+      box-shadow: none;
+      height: 60rem;
       position: relative;
       z-index: 1;
       transform: scale(0.6) translateY(-2rem);
@@ -195,25 +209,23 @@ html body .heading a {
         font-size: 2rem;
     }
     .ui-card .body-text-container{
-      margin-top: -2rem;
+      margin-top: 1rem;
       display: flex;
       justify-content: space-around;
-      flex-direction: row;
+      flex-direction: column;
+
       width: 100%;
     }
     .body-text-container h5{
       text-align: center;
     }
-    .ui-card .text-vision, .text-mision{
-      /* width: 45%; */
-      padding: 0px 15px;
-      text-align: justify;
-    }
+
     .ui-card .card-body-text{
       color: black;
+      padding: 0px 25px;
       font-size: 0.8rem;
-      margin-top: -1rem;
-      margin-bottom: 1rem;
+      margin-top: 0rem;
+      margin-bottom: 0.5rem;
     }
     .ui-card .card-footer{
       display: flex;
