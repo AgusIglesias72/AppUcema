@@ -65,7 +65,7 @@ html body .heading a {
     border-radius: 100%;
     margin-top: -10rem;
     background-color: white;
-    width: 14rem;
+    max-width: 14rem;
     height: 14rem;
 }
 .ui-card .card-body-title{
@@ -180,10 +180,12 @@ html body .heading a {
     .ui-card .card-body-img{
         border: 2px solid white;
         border-radius: 100%;
-        margin-top: -10rem;
+        margin-top: -8rem;
         background-color: white;
+        /* scale: (0.4); */
         width: 14rem;
         height: 14rem;
+        transition: 1s;
     }
     .ui-card .card-body-title{
         margin-top: -2px;
@@ -232,18 +234,17 @@ html body .heading a {
     .container .ui-card:before {
       top: 50%;
       left: 50%;
-      /* -webkit-transform: translateX(-50%) translateY(-50%);
-              transform: translateX(-50%) translateY(-50%); */
       font-size: 3rem;
       font-weight: 300;
     }
     .container .ui-card.active {
-      width: 30rem;
+      max-width: 30rem;
+      width: 90vw;
       z-index: 3;
       transform: scale(1) translateY(0) translateX(0);
       opacity: 1;
       pointer-events: auto;
-      transition: 1s;
+      transition: 0.2s;
     }
     .container .ui-card.prev,
     .container .ui-card.next {
