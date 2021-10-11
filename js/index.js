@@ -103,8 +103,6 @@ $('html body').keydown(function(e) {
 
 let startX, startY, movingX, movingY
 
-let detectMovement
-
 const touchStart = evt => {
   startX = evt.touches[0].clientX;
   startY = evt.touches[0].clientY;
@@ -115,11 +113,15 @@ const touchMove = evt => {
 }
 
 const touchEnd = () => {
-  if (startX+100 < movingX && startY+100 > movingY){
-    detectMovement = "left"
+  if (startX+100 < movingX && (startY - movingY) < 30){
+    console.log(startY)
+    console.log(movingY)
+    console.log('left')
     $('.active').prev().trigger('click');
-  } else if (startX-100 > movingX && startY-100 < movingY){
-    detectMovement = "right"
+  } else if (startX-100 > movingX && (startY - movingY) < 30){
+    console.log(startY)
+    console.log(movingY)
+    console.log('right')
     $('.active').next().trigger('click');
   }
 
