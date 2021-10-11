@@ -6,20 +6,38 @@ html {
 html body {
   margin: none;
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(to bottom,rgba(160,3,39,1) 1%,rgba(160,3,39,1) 1%,rgba(109,0,25,1) 100%);
+  background: linear-gradient(#005c6b, #4fb65a);
+
+  /* background: linear-gradient(to bottom,rgba(160,3,39,1) 1%,rgba(160,3,39,1) 1%,rgba(109,0,25,1) 100%); */
 }
+
+
 html body .heading {
   max-width: 100%;
   text-align: center;
   margin-bottom: 3rem;
 }
-.headerImg{
+.imgContainer{
   margin: auto;
+  margin-bottom: 5rem;
+  display: flex;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 5rem;
+  align-items: center; 
 }
+.heading .imgContainer .imgLevellers{
+  width: 15rem;
+  height: 15rem;
+  margin-left: 5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.heading .imgContainer .imgDDP{
+
+  cursor: pointer;
+}
+
+
 .flechas {
   display: none;}
 
@@ -45,7 +63,7 @@ html body .heading a {
   border-radius: 16px;
   overflow: hidden;
   align-items: center;
-  box-shadow: 10px 10px rgba(0, 0, 0, 0.095);
+  box-shadow: 18px 5px 11px 3px rgba(0, 0, 0, 0.15);
   height: 42rem;
   position: relative;
   z-index: 1;
@@ -58,6 +76,7 @@ html body .heading a {
   box-shadow: none ;
   cursor: default ;
   opacity: 0;
+  box-shadow: NONE;
 }
 
 .ui-card .card-header{
