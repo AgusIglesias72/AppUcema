@@ -15,22 +15,10 @@
 <body>
     <div class="heading">
         <div class="imgContainer">
-            <img class="imgDDP" src="./img/UcemaDDP.png" href="https://ucema.edu.ar/ddp" alt="ImagenDDP">
-            <img class="imgLevellers" src="./img/Levellers.jpeg" href="https://www.clublevellers.com.ar/" alt="ImagenLevellers">
+            <img class="imgDDP" src="./img/UcemaDDP.png" href="https://ucema.edu.ar/ddp" target="_blank" alt="ImagenDDP">
+            <img class="imgLevellers" src="./img/Levellers.jpeg" href="https://www.clublevellers.com.ar/" target="_blank" alt="ImagenLevellers">
         </div>
-        
-        <div id="main">
-            <div>
-                <div class="flechas">
-                    <div id="flecha-izq" class="flecha-izq">
-                        <i class="fas fa-arrow-circle-left fa-6x"></i>
-                    </div>
-                    <div id="flecha-der" class="flecha-der">
-                        <i class="fas fa-arrow-circle-right fa-6x"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" ontouchend="touchEnd()" class="container" id="cardContainer">
             <div id="firstLast" class="ui-card">
 
@@ -55,6 +43,10 @@
             </div>
         </div>
         <div id="footer-card"class="card-footer">
+        </div>
+        <div id="footer-info" class="footer-info">
+            <span id="infoMail" class=""></span>
+            <span id="infoPhone" class="notShow"></span>
         </div>
     </div>
 </template>

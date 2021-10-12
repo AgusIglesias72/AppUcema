@@ -2,8 +2,6 @@ const template = document.getElementById('template-card').content
 const fragment = document.createDocumentFragment()
 const card = document.getElementById('cardContainer')
 
-
-
 const showCard = () => {
   orgTotal.forEach(elemento =>{
     template.getElementById('image').setAttribute('src', elemento.img)
@@ -13,22 +11,22 @@ const showCard = () => {
     template.getElementById('text-Three').textContent = elemento.descTres
     template.getElementById('text-Four').textContent = elemento.descCuatro
 
+    // Creo los Elementos del Footer
     const footer = template.getElementById('footer-card')
     footer.innerHTML=""
     if (elemento.Mail != ""){
       const createMail = document.createElement('div')
       createMail.classList.add('card-footer-text')
       createMail.innerHTML = `
-      <a id="E-Mail${elemento.id}" class="logo" href="${elemento.Mail}"><i class="fas fa-envelope fa-3x"></i></a>
+      <a id="E-Mail${elemento.id}" class=""><i class="fas fa-envelope fa-3x logo"></i></a>
       `
       footer.appendChild(createMail)
     }
-
     if (elemento.linkedIn != ""){
       const createLink = document.createElement('div')
       createLink.classList.add('card-footer-text')
       createLink.innerHTML = `
-      <a id="LinkedIn${elemento.id}" class="logo" href="${elemento.linkedIn}"><i class="fab fa-linkedin fa-3x"></i></a>
+      <a id="LinkedIn${elemento.id}" class="logo" href="${elemento.linkedIn}" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
       `
       footer.appendChild(createLink)
     }
@@ -36,7 +34,7 @@ const showCard = () => {
       const createWeb = document.createElement('div')
       createWeb.classList.add('card-footer-text')
       createWeb.innerHTML = `
-      <a id="WebSite${elemento.id}" class="logo" href="${elemento.WebSite}"><i class="fas fa-globe fa-3x"></i> </i></a>
+      <a id="WebSite${elemento.id}" class="logo" href="${elemento.WebSite}" target="_blank"><i class="fas fa-globe fa-3x"></i> </i></a>
       `
       footer.appendChild(createWeb)
     }
@@ -44,19 +42,46 @@ const showCard = () => {
       const createPhone = document.createElement('div')
       createPhone.classList.add('card-footer-text')
       createPhone.innerHTML = `
-      <a id="Phone${elemento.id}" class="logo" href="${elemento.Phone}"><i class="fas fa-phone-square-alt fa-3x"></i></a>
+      <a id="Phone${elemento.id}" class="logo"><i class="fas fa-phone-square-alt fa-3x"></i></a>
       `
       footer.appendChild(createPhone)
     }
 
-  
+    const footerMail = template.getElementById('infoMail')
+    footerMail.classList.add('notShow')
+    footerMail.innerHTML = `${elemento.Mail}`
+
+    const footerPhone = template.getElementById('infoPhone')
+    footerPhone.classList.add('notShow')
+    footerPhone.innerHTML = `${elemento.Phone}`
+
     const clone = template.cloneNode(true)
     fragment.appendChild(clone)
   }) 
   card.insertBefore(fragment, card.children[1])
 }
-
 showCard()
+
+card.addEventListener('click', e => mostrarMail(e))
+const mostrarMail = e =>{
+  if (e.target.classList.contains("fa-envelope")){
+    const showMail = e.target.parentElement.parentElement.parentElement.parentElement
+
+    console.log(showMail.children[3].children[0])
+    showMail.children[3].children[0].classList.toggle('notShow')
+    console.log(showMail.children[3].children[0])
+  }
+}
+card.addEventListener('click', e => mostrarTelefono(e))
+const mostrarTelefono = e =>{
+  if (e.target.classList.contains("fa-phone-square-alt")){
+    const showPhone = e.target.parentElement.parentElement.parentElement.parentElement
+
+    console.log(showPhone.children[3].children[1])
+    showPhone.children[3].children[1].classList.toggle('notShow')
+
+  }
+}
 
 $num = $('.ui-card').length;
 $even = $num / 2;
@@ -132,24 +157,4 @@ const touchEnd = () => {
       $('.active').next().trigger('click');
     }
   }
-  
-  
-  // else {
-    
-  // }
-
-  //  else {
-  //   if (startX+100 < movingX && Math.abs(startY - movingY) < 30){
-  //     console.log('left')
-  //     $('.active').prev().trigger('click');
-  //   } else if (startX-100 > movingX && Math.abs(startY - movingY) < 30){
-  //     console.log('right')
-  //     $('.active').next().trigger('click');
-  //   }
-  // }
-  
-  
-  console.log(card.children[12])
-  const testing = card.children[12].classList.contains('active')
-  console.log(testing)
 }

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 html {
   max-width: 100vw;
 }
@@ -7,11 +10,19 @@ html body {
   margin: none;
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(#005c6b, #4fb65a);
-
-  /* background: linear-gradient(to bottom,rgba(160,3,39,1) 1%,rgba(160,3,39,1) 1%,rgba(109,0,25,1) 100%); */
 }
-
-
+.notShow{
+  display: none;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+p, span{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  word-spacing: 1px;
+}
 html body .heading {
   max-width: 100%;
   text-align: center;
@@ -20,7 +31,6 @@ html body .heading {
 .imgContainer{
   margin: auto;
   margin-bottom: 5rem;
-  display: flex;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -35,21 +45,20 @@ html body .heading {
 .heading .imgContainer .imgDDP{
   cursor: pointer;
 }
-
-
-.flechas {
-  display: none;}
-
+.footer-info{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
 html body .heading a {
   color: #2e5266;
   display: inline-block;
 }
-
 .fas, .fab{
   width: 100%;
   display: inline-block;
 }
-
 .container {
   display: flex;
   justify-content: center;
@@ -63,7 +72,7 @@ html body .heading a {
   overflow: hidden;
   align-items: center;
   box-shadow: 18px 5px 11px 3px rgba(0, 0, 0, 0.15);
-  height: 42rem;
+  height: 52rem;
   position: relative;
   z-index: 1;
   transform: scale(0.6) translateY(-2rem);
@@ -101,7 +110,6 @@ html body .heading a {
     margin-top: -2px;
     font-size: 2rem;
 }
-
 .ui-card .body-text-container{
   text-align: justify;
   display: flex;
@@ -113,7 +121,6 @@ html body .heading a {
 .body-text-container h5{
   text-align: center;
 }
-
 .ui-card .card-body-text{
   color: black;
   padding: 0px 25px;
@@ -123,15 +130,15 @@ html body .heading a {
 }
 .ui-card .card-footer{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  
 }
 .card-footer .card-footer-text{
   text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    
 }
-
-
 .container .ui-card:after {
   height: 2px;
   width: 100%;
@@ -142,8 +149,6 @@ html body .heading a {
 .container .ui-card:before {
   top: 50%;
   left: 50%;
-  /* -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%); */
   font-size: 3rem;
   font-weight: 300;
 }
@@ -166,153 +171,47 @@ html body .heading a {
   cursor: pointer
 }
   
-  @media only screen and (min-width:993px){
-    
+  @media only screen and (min-width:993px) and (max-width: 1300px){
+    .container .ui-card {
+      height: 70rem;
+    }
   }
   @media only screen and (max-width: 992px)  {
-    *, *:before, *:after {
-      box-sizing: inherit; }
     .imgContainer{
-      margin: auto;
       margin-bottom: 2rem;
-      display: flex;
       flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center; 
     }
     .heading .imgContainer .imgLevellers{
       width: 10rem;
       height: 10rem;
       margin-left: 0rem;
-      border-radius: 100%;
-      cursor: pointer;
     }
     .heading .imgContainer .imgDDP{
-      cursor: pointer;
       width: 12rem;
       height: 12rem;
     }
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
     .container .ui-card {
-      background-color: white;
-      margin-bottom: 30px;
-      border-radius: 16px;
-      overflow: hidden;
-      align-items: center;
       box-shadow: none;
-      height: 60rem;
-      position: relative;
-      z-index: 1;
-      transform: scale(0.6) translateY(-2rem);
-      pointer-events: none;
-      transition: 1s;
-      width: 0px;
+      height: 64rem;
     }
-    #firstLast{
-      box-shadow: none ;
-      cursor: default ;
-    }
-    
-    .ui-card .card-header{
-      width: 100%;
-      display: block;
-    }
-    .ui-card .card-body{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: 1px solid rgba(153, 153, 153, 0.382);
-    }
+
     .ui-card .card-body-img{
-        border: 2px solid white;
-        border-radius: 100%;
         margin-top: -8rem;
         background-color: white;
-        /* scale: (0.4); */
         width: 14rem;
-        height: 14rem;
         transition: 1s;
-    }
-    .ui-card .card-body-title{
-        margin-top: -2px;
-        font-size: 2rem;
     }
     .ui-card .body-text-container{
       margin-top: 1rem;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
+    }    
 
-      width: 100%;
-    }
-    .body-text-container h5{
-      text-align: center;
-    }
-
-    .ui-card .card-body-text{
-      color: black;
-      padding: 0px 25px;
-      font-size: 0.8rem;
-      margin-top: 0rem;
-      margin-bottom: 0.5rem;
-    }
-    .ui-card .card-footer{
-      display: flex;
-      justify-content: space-evenly;
-    }
-    .card-footer .card-footer-text{
-      text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-    
-    
-    .container .ui-card:after {
-      height: 2px;
-      width: 100%;
-      border-radius: 100%;
-      background-color: rgba(0,0,0,0.3);
-      bottom: -5rem;
-    }
-    .container .ui-card:before {
-      top: 50%;
-      left: 50%;
-      font-size: 3rem;
-      font-weight: 300;
-    }
     .container .ui-card.active {
       max-width: 30rem;
       width: 90vw;
-      z-index: 3;
-      transform: scale(1) translateY(0) translateX(0);
-      opacity: 1;
-      pointer-events: auto;
       transition: 0.2s;
     }
     .container .ui-card.prev,
     .container .ui-card.next {
       display: none;
     }
-
-
-    .flechas {
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 10px; }
-      .flechas .flecha-izq {
-        color: rgba(224, 24, 24, 0.50);
-        cursor: pointer; }
-        .flechas .flecha-izq:hover {
-          color: rgba(224, 24, 24, 0.87); }
-      .flechas .flecha-der {
-        color: rgba(224, 24, 24, 0.50);
-        cursor: pointer; }
-        .flechas .flecha-der:hover {
-          color: rgba(224, 24, 24, 0.87); }
-
   }
