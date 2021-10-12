@@ -61,7 +61,7 @@ orgTotal.push(
                 WebSite:"https://www.llorenteycuenca.com" , 
                 linkedIn: "https://www.linkedin.com/company/llyc/", 
                 descUno: LLYCParrUno, descDos: LLYCParrDos, descTres: LLYCParrTres},
-    {id:2, nombre: "Fara y Asociados", 
+    {id:2, nombre: "Carlos Fara y Asociados", 
                 img: "./img/Logos/LogoFara.jpg",
                 Phone: "+54 11 4328-3283", 
                 Mail:"", 
